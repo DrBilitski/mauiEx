@@ -1,0 +1,5 @@
+# Ignore connection string file
+connection.txt
+
+# Ignore secrets file
+Secrets.cs

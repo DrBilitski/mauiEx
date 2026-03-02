@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+// ...existing code...
 namespace MauiApp1;
 
 public partial class MainPage : ContentPage
@@ -16,7 +17,7 @@ public partial class MainPage : ContentPage
 
 	private async void TestAzureSqlConnection()
 	{
-		string connectionString = "FILL_IN_YOUR_CONNECTION_STRING_HERE";
+		string connectionString = Secrets.ConnectionString;
 		try
 		{
 			using (var connection = new Microsoft.Data.SqlClient.SqlConnection(connectionString))
