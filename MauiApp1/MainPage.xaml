@@ -30,6 +30,17 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <CollectionView x:Name="DogsCollectionView" ItemsSource="{Binding Dogs}" HeightRequest="300">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10" ColumnDefinitions="50, *">
+                            <Label Text="{Binding ID}" FontAttributes="Bold" />
+                            <Label Text="{Binding Dog}" Grid.Column="1" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
 
